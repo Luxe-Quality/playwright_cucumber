@@ -1,0 +1,47 @@
+{
+  "name": "web.ui.tests",
+  "description": "",
+  "main": "cucumber.js",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.5.1",
+    "cucumber-junit": "^1.5.0",
+    "cucumberjs-junitxml": "^1.0.0",
+    "dotenv": "^16.3.1",
+    "expect": "^27.5.1",
+    "playwright": "^1.38.0"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.38.0",
+    "config": "^3.3.9",
+    "cucumber-html-reporter": "^5.5.1",
+    "moment": "^2.29.4",
+    "npm-check-updates": "^16.14.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "keywords": [
+    "cucumber",
+    "playwright",
+    "playwright automation",
+    "e2e",
+    "e2e tests",
+    "integration test",
+    "test automation",
+    "javascript"
+  ],
+  "scripts": {
+    "pretest": "rm -rf report/screenshots && rm -rf report/videos && rm -f report/cucumber-html-report.html",
+    "test:all": "cucumber-js --tags @all -f json:report/report.json",
+    "e2e": "cucumber-js --tags @e2e -f json:report/report.json",
+    "section": "cucumber-js --tags @section -f json:report/report.json",
+    "locale": "cucumber-js --tags @locale -f json:report/report.json",
+    "form": "cucumber-js --tags @form -f json:report/report.json",
+    "navigation": "cucumber-js --tags @navigation -f json:report/report.json",
+    "generate": "node report.js"
+  },
+  "homepage": "https://github.com/Luxe-Quality/playwright_cucumber#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luxe-Quality/playwright_cucumber"
+  }
+}
